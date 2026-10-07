@@ -500,6 +500,46 @@ class WP_Style_Engine_Test extends WP_UnitTestCase {
 				),
 			),
 
+			'inline_valid_border_width_preset'             => array(
+				'block_styles'    => array(
+					'border' => array(
+						'width' => 'var:preset|border-width|thin',
+						'style' => 'solid',
+					),
+				),
+				'options'         => array(),
+				'expected_output' => array(
+					'css'          => 'border-style:solid;border-width:var(--wp--preset--border-width--thin);',
+					'declarations' => array(
+						'border-style' => 'solid',
+						'border-width' => 'var(--wp--preset--border-width--thin)',
+					),
+				),
+			),
+
+			'inline_valid_border_width_preset_with_sides'  => array(
+				'block_styles'    => array(
+					'border' => array(
+						'top'  => array(
+							'width' => 'var:preset|border-width|thick',
+						),
+						'left' => array(
+							'color' => 'var:preset|color|swampy-yellow',
+							'width' => 'var:preset|border-width|thin',
+						),
+					),
+				),
+				'options'         => array(),
+				'expected_output' => array(
+					'css'          => 'border-top-width:var(--wp--preset--border-width--thick);border-left-color:var(--wp--preset--color--swampy-yellow);border-left-width:var(--wp--preset--border-width--thin);',
+					'declarations' => array(
+						'border-top-width'  => 'var(--wp--preset--border-width--thick)',
+						'border-left-color' => 'var(--wp--preset--color--swampy-yellow)',
+						'border-left-width' => 'var(--wp--preset--border-width--thin)',
+					),
+				),
+			),
+
 			'inline_invalid_box_model_style_with_sides'    => array(
 				'block_styles'    => array(
 					'border' => array(

@@ -138,6 +138,28 @@
 								},
 								"additionalProperties": false
 							}
+						},
+						"widthSizes": {
+							"description": "Border width size presets for the border width selector.\nGenerates a custom property (`--wp--preset--border-width--{slug}`) per preset value.",
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"description": "Name of the border width size preset, translatable.",
+										"type": "string"
+									},
+									"slug": {
+										"description": "Unique identifier for the border width size preset.",
+										"type": "string"
+									},
+									"size": {
+										"description": "CSS border-width value, including units.",
+										"type": "string"
+									}
+								},
+								"additionalProperties": false
+							}
 						}
 					},
 					"additionalProperties": false

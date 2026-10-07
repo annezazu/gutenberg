@@ -126,6 +126,7 @@ class WP_Theme_JSON_Gutenberg {
 	 * @since 6.6.0 Updated the 'prevent_override' value for font size presets to use 'typography.defaultFontSizes' and spacing size presets to use `spacing.defaultSpacingSizes`.
 	 * @since 6.6.0 Added `aspectRatios`.
 	 * @since 7.2.0 Added 'textShadow' presets.
+	 * @since 7.2.0 Added `border.widthSizes` presets.
 	 * @var array
 	 */
 	const PRESETS_METADATA = array(
@@ -222,6 +223,15 @@ class WP_Theme_JSON_Gutenberg {
 			'css_vars'          => '--wp--preset--border-radius--$slug',
 			'classes'           => array(),
 			'properties'        => array( 'border-radius' ),
+		),
+		array(
+			'path'              => array( 'border', 'widthSizes' ),
+			'prevent_override'  => false,
+			'use_default_names' => false,
+			'value_key'         => 'size',
+			'css_vars'          => '--wp--preset--border-width--$slug',
+			'classes'           => array(),
+			'properties'        => array( 'border-width' ),
 		),
 		array(
 			'path'              => array( 'dimensions', 'dimensionSizes' ),
@@ -426,6 +436,7 @@ class WP_Theme_JSON_Gutenberg {
 			'style'       => null,
 			'width'       => null,
 			'radiusSizes' => null,
+			'widthSizes'  => null,
 		),
 		'color'                         => array(
 			'background'       => null,

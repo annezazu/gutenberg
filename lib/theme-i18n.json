@@ -67,6 +67,11 @@
 				{
 					"name": "Border radius size name"
 				}
+			],
+			"widthSizes": [
+				{
+					"name": "Border width size name"
+				}
 			]
 		},
 		"blocks": {
@@ -128,6 +133,11 @@
 					"radiusSizes": [
 						{
 							"name": "Border radius size name"
+						}
+					],
+					"widthSizes": [
+						{
+							"name": "Border width size name"
 						}
 					]
 				}

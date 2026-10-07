@@ -122,6 +122,12 @@ export const PRESET_METADATA = [
 		classes: [],
 	},
 	{
+		path: [ 'border', 'widthSizes' ],
+		valueKey: 'size',
+		cssVarInfix: 'border-width',
+		classes: [],
+	},
+	{
 		path: [ 'dimensions', 'dimensionSizes' ],
 		valueKey: 'size',
 		cssVarInfix: 'dimension',

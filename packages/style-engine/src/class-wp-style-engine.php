@@ -166,33 +166,40 @@ if ( ! class_exists( 'WP_Style_Engine' ) ) {
 						'individual' => 'border-%s-width',
 					),
 					'path'          => array( 'border', 'width' ),
+					'css_vars'      => array(
+						'border-width' => '--wp--preset--border-width--$slug',
+					),
 				),
 				'top'    => array(
 					'value_func' => array( self::class, 'get_individual_property_css_declarations' ),
 					'path'       => array( 'border', 'top' ),
 					'css_vars'   => array(
-						'color' => '--wp--preset--color--$slug',
+						'color'        => '--wp--preset--color--$slug',
+						'border-width' => '--wp--preset--border-width--$slug',
 					),
 				),
 				'right'  => array(
 					'value_func' => array( self::class, 'get_individual_property_css_declarations' ),
 					'path'       => array( 'border', 'right' ),
 					'css_vars'   => array(
-						'color' => '--wp--preset--color--$slug',
+						'color'        => '--wp--preset--color--$slug',
+						'border-width' => '--wp--preset--border-width--$slug',
 					),
 				),
 				'bottom' => array(
 					'value_func' => array( self::class, 'get_individual_property_css_declarations' ),
 					'path'       => array( 'border', 'bottom' ),
 					'css_vars'   => array(
-						'color' => '--wp--preset--color--$slug',
+						'color'        => '--wp--preset--color--$slug',
+						'border-width' => '--wp--preset--border-width--$slug',
 					),
 				),
 				'left'   => array(
 					'value_func' => array( self::class, 'get_individual_property_css_declarations' ),
 					'path'       => array( 'border', 'left' ),
 					'css_vars'   => array(
-						'color' => '--wp--preset--color--$slug',
+						'color'        => '--wp--preset--color--$slug',
+						'border-width' => '--wp--preset--border-width--$slug',
 					),
 				),
 			),
